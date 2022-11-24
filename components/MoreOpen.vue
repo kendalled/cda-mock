@@ -9,13 +9,6 @@
   >
     <!--
     Flyout menu, show/hide based on flyout menu state.
-
-    Entering: "transition ease-out duration-200"
-      From: "opacity-0 translate-y-1"
-      To: "opacity-100 translate-y-0"
-    Leaving: "transition ease-in duration-150"
-      From: "opacity-100 translate-y-0"
-      To: "opacity-0 translate-y-1"
   -->
     <div
       v-if="isOpen"
@@ -27,7 +20,7 @@
           <a href="#" class="flex items-start p-3 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
             <!-- Heroicon name: outline/support -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              class="flex-shrink-0 w-6 h-6 text-rose-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -51,7 +44,7 @@
           <a href="#" class="flex items-start p-3 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
             <!-- Heroicon name: outline/bookmark-alt -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              class="flex-shrink-0 w-6 h-6 text-rose-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -74,7 +67,7 @@
           <a href="#" class="flex items-start p-3 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
             <!-- Heroicon name: outline/calendar -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              class="flex-shrink-0 w-6 h-6 text-rose-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -98,7 +91,7 @@
           <a href="#" class="flex items-start p-3 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50">
             <!-- Heroicon name: outline/shield-check -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              class="flex-shrink-0 w-6 h-6 text-rose-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -141,7 +134,7 @@
             </ul>
           </div>
           <div class="mt-5 text-sm">
-            <a href="#" class="font-medium text-orange-600 transition duration-150 ease-in-out hover:text-orange-500"> View
+            <a href="#" class="font-medium text-rose-600 transition duration-150 ease-in-out hover:text-rose-500"> View
               all posts <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>

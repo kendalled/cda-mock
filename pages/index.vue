@@ -1,7 +1,15 @@
 <template>
   <main>
-    <Hero />
+    <Navbar />
+    <AngledHero />
+    <LogoCloud />
+
+    <AltFeatures />
     <PictureStats />
+    <ContentPiece />
+    <Checklist />
+    <SimpleAction />
+    <DarkFooterTwo />
   </main>
 </template>
 

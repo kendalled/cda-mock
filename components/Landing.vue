@@ -30,9 +30,9 @@
           <div>
             <div>
               <img
-                class="h-11 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=rose&shade=500"
-                alt="Your Company"
+                class="h-24 w-auto"
+                src="~/static/cda-logo.png"
+                alt="Coast Dealing Academy logo"
               >
             </div>
             <div class="mt-20">
