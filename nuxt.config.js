@@ -15,7 +15,20 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://rsms.me/inter/inter.css'
+      }
+    ],
+    style: [{
+      cssText: '@font-face { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segou UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif }',
+      type: 'text/css'
+    },
+    {
+      cssText: 'body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segou UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif }',
+      type: 'text/css'
+    }
     ]
   },
 
@@ -41,7 +54,6 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
