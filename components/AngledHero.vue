@@ -16,7 +16,7 @@
         <div class="w-full h-4 lg:h-12 bg-gray-50" />
 
         <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-          <!-- what's new bar -->
+          <!-- what's new bar-->
           <div>
             <a href="#" class="inline-flex space-x-4">
               <span class="rounded bg-rose-50 px-2.5 py-1 text-sm font-semibold text-rose-500">What's new</span>
