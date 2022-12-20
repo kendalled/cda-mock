@@ -1,23 +1,23 @@
 <template>
-  <div class="relative bg-white z-30 border-b border-gray-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+  <div class="relative bg-white border-b border-gray-200">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6">
       <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto sm:h-16" src="~/static/cda-logo.png" alt="Coast Dealing Academy Logo">
+            <img class="w-auto h-8 sm:h-16" src="~/static/cda-logo.png" alt="Coast Dealing Academy Logo">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
           <button
             type="button"
-            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
             aria-expanded="false"
           >
             <span class="sr-only">Open menu</span>
             <!-- Heroicon name: outline/bars-3 -->
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -34,7 +34,7 @@
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
               type="button"
-              class="text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
               :aria-expanded="solutionsOpen"
               @click.prevent="solutionsOpen = true"
             >
@@ -45,7 +45,7 @@
                   Item active: "text-gray-600", Item inactive: "text-gray-400"
                 -->
               <svg
-                class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                class="w-5 h-5 ml-2 text-gray-400 group-hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -79,7 +79,7 @@
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
               type="button"
-              class="text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
               :aria-expanded="moreOpen"
               @click.prevent="moreOpen = true"
             >
@@ -90,7 +90,7 @@
                   Item active: "text-gray-600", Item inactive: "text-gray-400"
                 -->
               <svg
-                class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                class="w-5 h-5 ml-2 text-gray-400 group-hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -117,11 +117,11 @@
             <MoreOpen :open="moreOpen" @close="moreOpen = false" />
           </div>
         </nav>
-        <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign in</a>
+        <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
+          <a href="#" class="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900">Sign in</a>
           <a
             href="#"
-            class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
+            class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-orange-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-orange-700"
           >Sign
             up</a>
         </div>
@@ -138,13 +138,13 @@
           From: "opacity-100 scale-100"
           To: "opacity-0 scale-95"
       -->
-    <div v-show="false" class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
-      <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+    <div v-show="false" class="absolute inset-x-0 top-0 z-10 p-2 transition origin-top-right transform md:hidden">
+      <div class="bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
         <div class="px-5 pt-5 pb-6">
           <div class="flex items-center justify-between">
             <div>
               <img
-                class="h-8 w-auto"
+                class="w-auto h-8"
                 src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600"
                 alt="Your Company"
               >
@@ -152,12 +152,12 @@
             <div class="-mr-2">
               <button
                 type="button"
-                class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
+                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
               >
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x-mark -->
                 <svg
-                  class="h-6 w-6"
+                  class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -172,10 +172,10 @@
           </div>
           <div class="mt-6">
             <nav class="grid gap-y-8">
-              <a href="#" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="#" class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                 <!-- Heroicon name: outline/chart-bar -->
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-orange-600"
+                  class="flex-shrink-0 w-6 h-6 text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -192,10 +192,10 @@
                 <span class="ml-3 text-base font-medium text-gray-900">Analytics</span>
               </a>
 
-              <a href="#" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="#" class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                 <!-- Heroicon name: outline/cursor-arrow-rays -->
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-orange-600"
+                  class="flex-shrink-0 w-6 h-6 text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -212,10 +212,10 @@
                 <span class="ml-3 text-base font-medium text-gray-900">Engagement</span>
               </a>
 
-              <a href="#" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="#" class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                 <!-- Heroicon name: outline/shield-check -->
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-orange-600"
+                  class="flex-shrink-0 w-6 h-6 text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -232,10 +232,10 @@
                 <span class="ml-3 text-base font-medium text-gray-900">Security</span>
               </a>
 
-              <a href="#" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="#" class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                 <!-- Heroicon name: outline/squares-2x2 -->
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-orange-600"
+                  class="flex-shrink-0 w-6 h-6 text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -252,10 +252,10 @@
                 <span class="ml-3 text-base font-medium text-gray-900">Integrations</span>
               </a>
 
-              <a href="#" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+              <a href="#" class="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                 <!-- Heroicon name: outline/arrow-path -->
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-orange-600"
+                  class="flex-shrink-0 w-6 h-6 text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -274,7 +274,7 @@
             </nav>
           </div>
         </div>
-        <div class="space-y-6 py-6 px-5">
+        <div class="px-5 py-6 space-y-6">
           <div class="grid grid-cols-2 gap-y-4 gap-x-8">
             <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Pricing</a>
 
@@ -291,10 +291,10 @@
           <div>
             <a
               href="#"
-              class="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
+              class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-orange-600 border border-transparent rounded-md shadow-sm hover:bg-orange-700"
             >Sign
               up</a>
-            <p class="mt-6 text-center text-base font-medium text-gray-500">
+            <p class="mt-6 text-base font-medium text-center text-gray-500">
               Existing customer?
               <a href="#" class="text-orange-600 hover:text-orange-500">Sign in</a>
             </p>
