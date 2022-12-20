@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "aos": "^2.3.4",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "v-click-outside": "^3.2.0"

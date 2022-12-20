@@ -14,5 +14,12 @@
 </template>
 
 <script>
-export default {}
+import 'aos/dist/aos.css'
+import aos from 'aos'
+
+export default {
+  mounted () {
+    aos.init()
+  }
+}
 </script>
