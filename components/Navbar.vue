@@ -34,7 +34,7 @@
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
               type="button"
-              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:outline-2 focus:outline-orange-500 focus:outline-offset-2"
               :aria-expanded="solutionsOpen"
               @click.prevent="solutionsOpen = true"
             >
@@ -79,7 +79,7 @@
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
               type="button"
-              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              class="inline-flex items-center text-base font-medium text-gray-500 bg-white rounded-md group hover:text-gray-900 focus:outline-none focus:outline-2 focus:outline-orange-500 focus:outline-offset-2"
               :aria-expanded="moreOpen"
               @click.prevent="moreOpen = true"
             >
