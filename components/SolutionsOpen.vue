@@ -7,112 +7,135 @@
     leave-class="translate-y-0 opacity-100"
     leave-to-class="translate-y-1 opacity-0"
   >
-    <div v-if="isOpen" v-click-outside="vcoConfig" class="absolute z-20 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+    <!--
+    Flyout menu, show/hide based on flyout menu state.
+
+    Entering: "transition ease-out duration-200"
+      From: "opacity-0 translate-y-1"
+      To: "opacity-100 translate-y-0"
+    Leaving: "transition ease-in duration-150"
+      From: "opacity-100 translate-y-0"
+      To: "opacity-0 translate-y-1"
+  -->
+    <div v-if="isOpen" v-click-outside="vcoConfig" class="absolute z-40 w-screen max-w-md px-2 mt-3 -ml-4 transform rounded-lg shadow-lg sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
       <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
         <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-          <nuxt-link to="/services/personal-injury" title="Personal Injury Law" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+          <a href="#" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
             <!-- Heroicon name: outline/chart-bar -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-rose-600"
+              class="flex-shrink-0 w-6 h-6 text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
+              stroke-width="1.5"
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+              />
             </svg>
             <div class="ml-4">
-              <p class="text-base font-medium text-gray-900">
-                Personal Injury
-              </p>
-              <p class="mt-1 text-sm text-gray-500">
-                From car accidents to slips &amp; falls, our team is ready for your case.
-              </p>
+              <p class="text-base font-medium text-gray-900">Analytics</p>
+              <p class="mt-1 text-sm text-gray-500">Get a better understanding of where your traffic is coming
+                from.</p>
             </div>
-          </nuxt-link>
-
-          <nuxt-link to="/services/business-law" title="Business Law" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-            <!-- Heroicon name: outline/cursor-click -->
-            <svg
-              class="flex-shrink-0 w-6 h-6 text-rose-600"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-            </svg>
-            <div class="ml-4">
-              <p class="text-base font-medium text-gray-900">
-                Business Law
-              </p>
-              <p class="mt-1 text-sm text-gray-500">
-                Establish a new business, or aqcuire and merge companies with our help.
-              </p>
-            </div>
-          </nuxt-link>
-
-          <nuxt-link to="/services/family-law" title="Family Law" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-            <!-- Heroicon name: outline/shield-check -->
-            <svg
-              class="flex-shrink-0 w-6 h-6 text-rose-600"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            <div class="ml-4">
-              <p class="text-base font-medium text-gray-900">
-                Family Law
-              </p>
-              <p class="mt-1 text-sm text-gray-500">
-                Tackle divorce settlements or interpersonal issues with ease.
-              </p>
-            </div>
-          </nuxt-link>
-
-          <nuxt-link to="/services/criminal-law" title="Criminal Law" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-            <!-- Heroicon name: outline/view-grid -->
-            <svg
-              class="flex-shrink-0 w-6 h-6 text-rose-600"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            <div class="ml-4">
-              <p class="text-base font-medium text-gray-900">
-                Criminal Law
-              </p>
-              <p class="mt-1 text-sm text-gray-500">
-                We fight for each client as if they're family.
-              </p>
-            </div>
-          </nuxt-link>
+          </a>
 
           <a href="#" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-            <!-- Heroicon name: outline/refresh -->
+            <!-- Heroicon name: outline/cursor-arrow-rays -->
             <svg
-              class="flex-shrink-0 w-6 h-6 text-rose-600"
+              class="flex-shrink-0 w-6 h-6 text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
+              stroke-width="1.5"
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"
+              />
             </svg>
             <div class="ml-4">
-              <p class="text-base font-medium text-gray-900">Testimonials</p>
-              <p class="mt-1 text-sm text-gray-500">Take a look at our countless positive reviews and successful cases.</p>
+              <p class="text-base font-medium text-gray-900">Engagement</p>
+              <p class="mt-1 text-sm text-gray-500">Speak directly to your customers in a more meaningful way.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+            <!-- Heroicon name: outline/shield-check -->
+            <svg
+              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+              />
+            </svg>
+            <div class="ml-4">
+              <p class="text-base font-medium text-gray-900">Security</p>
+              <p class="mt-1 text-sm text-gray-500">Your customers&#039; data will be safe and secure.</p>
+            </div>
+          </a>
+
+          <a href="#" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+            <!-- Heroicon name: outline/squares-2x2 -->
+            <svg
+              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+              />
+            </svg>
+            <div class="ml-4">
+              <p class="text-base font-medium text-gray-900">Integrations</p>
+              <p class="mt-1 text-sm text-gray-500">Connect with third-party tools that you&#039;re already
+                using.</p>
+            </div>
+          </a>
+
+          <a href="#" class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+            <!-- Heroicon name: outline/arrow-path -->
+            <svg
+              class="flex-shrink-0 w-6 h-6 text-orange-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.678 48.678 0 017.324 0 4.006 4.006 0 013.7 3.7c.017.22.032.441.046.662M4.5 12l-3-3m3 3l3-3m12 3c0 1.232-.046 2.453-.138 3.662a4.006 4.006 0 01-3.7 3.7 48.657 48.657 0 01-7.324 0 4.006 4.006 0 01-3.7-3.7c-.017-.22-.032-.441-.046-.662M19.5 12l-3 3m3-3l3 3"
+              />
+            </svg>
+            <div class="ml-4">
+              <p class="text-base font-medium text-gray-900">Automations</p>
+              <p class="mt-1 text-sm text-gray-500">Build strategic funnels that will drive your customers to
+                convert</p>
             </div>
           </a>
         </div>
@@ -125,11 +148,15 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
+                stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+                />
               </svg>
               <span class="ml-3">Watch Demo</span>
             </a>
@@ -143,10 +170,15 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
+                stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                />
               </svg>
               <span class="ml-3">Contact Sales</span>
             </a>
@@ -160,6 +192,7 @@
 <script>
 import vClickOutside from 'v-click-outside'
 export default {
+  name: 'SolutionsOpen',
   directives: {
     clickOutside: vClickOutside.directive
   },
@@ -191,7 +224,7 @@ export default {
   },
   methods: {
     moreOpenMethod () {
-      console.log('Working...services')
+      console.log('Working...')
       this.isOpen = false
       this.$emit('close')
     }
